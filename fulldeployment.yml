@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: petclinic
-        image: anandanp/anandanpetclinic:2.0
+        image: chathameed/kubtest_01
         ports:
         - containerPort: 8080
 ---
