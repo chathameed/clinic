@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: chathameedpetclinic 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: chathameedpetclinic 
+    spec:
+      containers:
+        - name: chathameedpetclinic 
+          image: hameeddockerregistry.azurecr.io/chathameedpetclinic
+          ports:
+          - containerPort: 80
