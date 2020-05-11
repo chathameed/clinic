@@ -1,6 +1,7 @@
 # use a tomcat image
 FROM tomcat:latest
 
+WORKDIR /usr/src/app
 
-
-COPY petclinic.war /usr/local/tomcat/webapps/petclinic.war
+RUN mvnw jetty:run-war
+COPY target/petclinic.war /usr/local/tomcat/webapps/petclinic.war
